@@ -544,7 +544,7 @@ div.ac > ul > li:before,
   content: "\e9ba";
 }
 .full-toc .post-toc {
-  width: 200px;
+  width: 220px;
   padding-top: 10px;
   position: fixed;
   top: 106px;
