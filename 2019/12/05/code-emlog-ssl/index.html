@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>xls系统开发进度之2019年12月3日 | Hexo</title>
-  <meta name="keywords" content=" xls系统 , 生产erp系统 ">
-  <meta name="description" content="xls系统开发进度之2019年12月3日 | Hexo">
+  <title>emlog使用ssl问题解决方案 | Hexo</title>
+  <meta name="keywords" content=" emlog , ssl ">
+  <meta name="description" content="emlog使用ssl问题解决方案 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于程忧点滴">
 <meta property="og:type" content="website">
@@ -559,9 +559,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-xlserp-develop-2019-12-3" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-code-emlog-ssl" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">xls系统开发进度之2019年12月3日</h1>
+        <h1 class="article-title">emlog使用ssl问题解决方案</h1>
     
     <div class="article-meta">
         
@@ -569,23 +569,25 @@
         
         <span class="book">
             
-                <a  data-rel="xls开发">xls开发</a>
+                <a  data-rel="程序源码">程序源码</a>/
+            
+                <a  data-rel="emlog">emlog</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color1">xls系统</a>
+            <a class="color1">emlog</a>
             
-            <a class="color3">生产erp系统</a>
+            <a class="color4">ssl</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-01-30 22:54:24'>2019-11-28 15:05</time>
+        创建时间:<time class="date" title='更新时间: 2020-02-01 18:57:00'>2019-12-05 15:06</time>
         
     </div>
     <div class="article-meta">
@@ -596,7 +598,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开发记录2019-12-3"><span class="toc-text">开发记录2019-12-3</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方案和下载"><span class="toc-text">方案和下载</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#第一步：服务器后台-虚拟空间后台添加ssl域名绑定"><span class="toc-text">第一步：服务器后台&#x2F;虚拟空间后台添加ssl域名绑定</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第二步：后台更改网站地址为https-www-xxxx-com"><span class="toc-text">第二步：后台更改网站地址为https:&#x2F;&#x2F;www.xxxx.com</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第二步：下载一下插件，后台激活"><span class="toc-text">第二步：下载一下插件，后台激活</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#下载地址一："><span class="toc-text">下载地址一：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#下载地址二："><span class="toc-text">下载地址二：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAQ："><span class="toc-text">FAQ：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步："><span class="toc-text">第一步：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步："><span class="toc-text">第二步：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步："><span class="toc-text">第三步：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步："><span class="toc-text">第四步：</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -612,8 +614,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="开发记录2019-12-3"><a href="#开发记录2019-12-3" class="headerlink" title="开发记录2019-12-3"></a>开发记录2019-12-3</h2><p>截止今天2019-12-3，记录下最新的开发进度：<br>最主要的生产系统已经开发出来了，如下图：<br><img src="/img/xlsdh.png" alt="系统导航"></p>
-<p><img src="/img/xlskfjd.png" alt="开发进度"></p>
+        <h2 id="方案和下载"><a href="#方案和下载" class="headerlink" title="方案和下载"></a>方案和下载</h2><h5 id="第一步：服务器后台-虚拟空间后台添加ssl域名绑定"><a href="#第一步：服务器后台-虚拟空间后台添加ssl域名绑定" class="headerlink" title="第一步：服务器后台/虚拟空间后台添加ssl域名绑定"></a>第一步：服务器后台/虚拟空间后台添加ssl域名绑定</h5><h5 id="第二步：后台更改网站地址为https-www-xxxx-com"><a href="#第二步：后台更改网站地址为https-www-xxxx-com" class="headerlink" title="第二步：后台更改网站地址为https://www.xxxx.com"></a>第二步：后台更改网站地址为<a href="https://www.xxxx.com" target="_blank" rel="noopener">https://www.xxxx.com</a></h5><h5 id="第二步：下载一下插件，后台激活"><a href="#第二步：下载一下插件，后台激活" class="headerlink" title="第二步：下载一下插件，后台激活"></a>第二步：下载一下插件，后台激活</h5><h6 id="下载地址一："><a href="#下载地址一：" class="headerlink" title="下载地址一："></a>下载地址一：</h6><p><a href="http://t.cn/AieVp1BK" target="_blank" rel="noopener">http://t.cn/AieVp1BK</a></p>
+<h6 id="下载地址二："><a href="#下载地址二：" class="headerlink" title="下载地址二："></a>下载地址二：</h6><p>链接：<a href="https://pan.baidu.com/s/1og76Tkxa3hRXGKmUYeA8sw" target="_blank" rel="noopener">https://pan.baidu.com/s/1og76Tkxa3hRXGKmUYeA8sw</a><br>提取码：t3xh </p>
+<h2 id="FAQ："><a href="#FAQ：" class="headerlink" title="FAQ："></a>FAQ：</h2><p>如无法正常开启<br>暂参考一下修改步骤：</p>
+<h4 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h4><p>网站跟目录下 /include/lib/option.php，请将以下内容粘贴到 get function 的 default 判断分支之前（在Emlog 5.3.1下是第43行）  </p>
+<pre><code>case &#39;blogurl&#39;:
+return realUrl();
+break;</code></pre><h4 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h4><p> /include/lib/function.base.php，请将以下内容粘贴到文件的末尾</p>
+<p>/**获取当前访问的base url**/</p>
+<pre><code>function realUrl() {
+static $real_url = NULL;
+if ($real_url !== NULL) {
+    return $real_url;
+}
+$emlog_path = EMLOG_ROOT . DIRECTORY_SEPARATOR;
+$script_path = pathinfo($_SERVER[&#39;SCRIPT_NAME&#39;], PATHINFO_DIRNAME);
+$script_path = str_replace(&#39;\\&#39;, &#39;/&#39;, $script_path);
+$path_element = explode(&#39;/&#39;, $script_path);
+$this_match = &#39;&#39;;
+$best_match = &#39;&#39;;
+$current_deep = 0;
+$max_deep = count($path_element);
+while($current_deep &lt; $max_deep) {
+    $this_match = $this_match . $path_element[$current_deep] . DIRECTORY_SEPARATOR;
+    if (substr($emlog_path, strlen($this_match) * (-1)) === $this_match) {
+        $best_match = $this_match;
+    }
+    $current_deep++;
+}
+$best_match = str_replace(DIRECTORY_SEPARATOR, &#39;/&#39;, $best_match);
+$real_url  = $_SERVER[&#39;HTTPS&#39;] === &#39;on&#39; ? &#39;https://&#39; : &#39;http://&#39;;
+$real_url .= $_SERVER[&quot;SERVER_NAME&quot;];
+$real_url .= in_array($_SERVER[&#39;SERVER_PORT&#39;], array(80, 443)) ? &#39;&#39; : &#39;:&#39; . $_SERVER[&#39;SERVER_PORT&#39;];
+$real_url .= $best_match;
+return $real_url;
+}</code></pre><h4 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h4><p>/init.php<br>请用以下代码覆盖同名的define （在Emlog 5.3.1下是第39行）  </p>
+<pre><code>define(&#39;DYNAMIC_BLOGURL&#39;, Option::get(&quot;blogurl&quot;));</code></pre><h4 id="第四步："><a href="#第四步：" class="headerlink" title="第四步："></a>第四步：</h4><p>最后如果网站使用http访问就强制转向https<br>在你的模板下的header.php中增加以下代码  </p>
+<pre><code>if(!isset($_SERVER[&#39;HTTPS&#39;])){
+Header(&quot;HTTP/1.1 301 Moved Permanently&quot;);
+header(&#39;Location: https://&#39;.$_SERVER[&#39;HTTP_HOST&#39;].$_SERVER[&#39;REQUEST_URI&#39;]);</code></pre><p>位置如图：<br><img src="/img/site-img.jpg" alt="具体位置"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
@@ -627,12 +666,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>xls系统开发进度之2019年12月3日</p>
+    <p><span class="copy-title">文章标题:</span>emlog使用ssl问题解决方案</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="chenuon">chenuon</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-28, 15:05:18</p>
-    <p><span class="copy-title">最后更新:</span>2020-01-30, 22:54:24</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/28/xlserp-develop-2019-12-3/" title="xls系统开发进度之2019年12月3日">http://yoursite.com/2019/11/28/xlserp-develop-2019-12-3/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-05, 15:06:18</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-01, 18:57:00</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/05/code-emlog-ssl/" title="emlog使用ssl问题解决方案">http://yoursite.com/2019/12/05/code-emlog-ssl/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
