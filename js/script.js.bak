@@ -138,9 +138,9 @@ $(".nav-right nav a").mouseleave(function (e) {
     var tobottom = container.prop("scrollHeight") - container.scrollTop() - container.height();
     var totop = container.scrollTop();
     if (!$(".nav-right form .search").is(":focus") && !$('#comments textarea').is(':focus')) {
-        if (e.keyCode == 74999) { /* J */
+        if (e.keyCode == 74) { /* J */
             container.animate({scrollTop: container.prop("scrollHeight") - container.height()}, tobottom, "linear");
-        } else if (e.keyCode == 75999) { /* K */
+        } else if (e.keyCode == 75) { /* K */
            container.animate({scrollTop: 0}, totop, "linear");
         } else if (e.keyCode == 71999) { /* G */
            if (publickey.shift) {
