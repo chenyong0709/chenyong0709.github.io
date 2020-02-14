@@ -239,11 +239,11 @@
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="typecho">typecho<small>(2)</small></div>
+                        <li><div data-rel="emlog">emlog<small>(1)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="emlog">emlog<small>(1)</small></div>
+                        <li><div data-rel="typecho">typecho<small>(2)</small></div>
                             
                         </li>
                             
@@ -279,7 +279,7 @@
     
         
             
-            <li><div data-rel="常用软件">常用软件<small>(2)</small></div>
+            <li><div data-rel="技巧应用">技巧应用<small>(4)</small></div>
                 
             </li>
             
@@ -287,7 +287,7 @@
     
         
             
-            <li><div data-rel="技巧应用">技巧应用<small>(4)</small></div>
+            <li><div data-rel="常用软件">常用软件<small>(2)</small></div>
                 
             </li>
             
@@ -355,6 +355,14 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color3">typecho</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color5">hexo</a>
     </li>
     
@@ -379,7 +387,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">typecho</a>
+        <a class="color1">terse</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">7tec</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -391,15 +403,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color1">terse</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">7tec</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">Markdown</a>
+        <a class="color5">plan</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -419,18 +423,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">python</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">pycharm</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">plan</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color4">多仓库</a>
     </li>
     
@@ -440,6 +432,18 @@
     
     <li class="article-tag-list-item">
         <a class="color4">ico</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">cmder</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">pycharm</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -463,10 +467,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color1">cmder</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color1">xls系统</a>
     </li>
     
@@ -475,15 +475,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">云表</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color1">erp系统</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color4">xlserp系统</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">云表</a>
     </li>
     
     <div class="clearfix"></div>
@@ -769,7 +769,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#emlog','#ssl','#hexo','#git','#nginx','#node','#linux','#beian','#typecho','#导航','#分类','#terse','#7tec','#Markdown','#程忧','#gitee','#coding','#阿里code','#python','#pycharm','#plan','#多仓库','#favicon','#ico','#windows7','#局域网共享','#wps','#pdf','#word','#cmder','#xls系统','#生产erp系统','#云表','#erp系统','#xlserp系统',],
+            'data': ['#emlog','#ssl','#typecho','#Markdown','#hexo','#git','#nginx','#node','#linux','#beian','#terse','#7tec','#导航','#分类','#plan','#程忧','#gitee','#coding','#阿里code','#多仓库','#favicon','#ico','#cmder','#python','#pycharm','#windows7','#局域网共享','#wps','#pdf','#word','#xls系统','#生产erp系统','#erp系统','#xlserp系统','#云表',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
