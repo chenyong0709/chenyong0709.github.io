@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>【傻瓜式】史上最详细的hexo部署到个人服务器 (git+nginx+hexo) | 程忧点滴</title>
-  <meta name="keywords" content=" hexo , git , nginx , node , linux ">
-  <meta name="description" content="【傻瓜式】史上最详细的hexo部署到个人服务器 (git+nginx+hexo) | 程忧点滴">
+  <title>xls系统开发(7)：学习心得 | 程忧点滴</title>
+  <meta name="keywords" content=" xlserp生产系统 ">
+  <meta name="description" content="xls系统开发(7)：学习心得 | 程忧点滴">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于程忧入坑2019&#x2F;11&#x2F;26：开始重新入坑博客，注册chenuon.cn域名，购买香港虚拟空间，搭建emlog博客程序，同时备案 2019&#x2F;12&#x2F;09：因emlog无故封停我em论坛的账号，多次联系无果，转战typecho程序 2020&#x2F;01&#x2F;17：只因一眼相望，发现了hexo轻量级静态博客程序，主要是发现了3-hexo主题，自此，折腾开始 折腾初级症状：下载软件node&#x2F;git&#x2F;hexo，根">
 <meta property="og:type" content="website">
@@ -684,48 +684,36 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-code-hexo-git-nginx" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-xlserp-study-record" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">【傻瓜式】史上最详细的hexo部署到个人服务器 (git+nginx+hexo)</h1>
+        <h1 class="article-title">xls系统开发(7)：学习心得</h1>
     
     <div class="article-meta">
-        
-        <span class="top"><a>置顶</a></span>
         
         
         
         <span class="book">
             
-                <a  data-rel="程序源码">程序源码</a>/
-            
-                <a  data-rel="hexo">hexo</a>
+                <a  data-rel="xls开发">xls开发</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">hexo</a>
-            
-            <a class="color4">git</a>
-            
-            <a class="color1">nginx</a>
-            
-            <a class="color5">node</a>
-            
-            <a class="color1">linux</a>
+            <a class="color1">xlserp生产系统</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-22 20:11:13'>2020-01-29 19:44</time>
+        创建时间:<time class="date" title='更新时间: 2020-02-22 11:04:48'>2020-02-22 10:48</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.2k</span>
+        <span>字数:88</span>
         
         
         
@@ -733,7 +721,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#从0到1"><span class="toc-text">从0到1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、本地环境【客户端】"><span class="toc-text">一、本地环境【客户端】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载node，"><span class="toc-text">1.下载node，</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装hexo"><span class="toc-text">2.安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-hexo初始化"><span class="toc-text">3.hexo初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-hexo配置"><span class="toc-text">4.hexo配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-本地测试"><span class="toc-text">5.本地测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-本地git"><span class="toc-text">6.本地git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、linux环境【服务器】"><span class="toc-text">二、linux环境【服务器】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-搭建git环境"><span class="toc-text">1.搭建git环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-建立ssh免密登录："><span class="toc-text">2.建立ssh免密登录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-限制git登录"><span class="toc-text">3.限制git登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-nginx配置"><span class="toc-text">4.nginx配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改hexo配置"><span class="toc-text">5.修改hexo配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-上传测试"><span class="toc-text">6.上传测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、部署完成"><span class="toc-text">三、部署完成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-总结"><span class="toc-text">1.总结</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#直播学习心得"><span class="toc-text">直播学习心得</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-if使用"><span class="toc-text">1.if使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多主键关系"><span class="toc-text">2.多主键关系</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -749,152 +737,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="从0到1"><a href="#从0到1" class="headerlink" title="从0到1"></a>从0到1</h1><p>本次以阿里云重新安装系统开始为例，详细讲解步骤：  </p>
-<h2 id="一、本地环境【客户端】"><a href="#一、本地环境【客户端】" class="headerlink" title="一、本地环境【客户端】"></a>一、本地环境【客户端】</h2><p>这里以本地的win7电脑为例，  </p>
-<h3 id="1-下载node，"><a href="#1-下载node，" class="headerlink" title="1.下载node，"></a>1.下载node，</h3><p>默认安装，安装完成之后，<code>node -v</code>看看版本号<br><a href="http://sz-btfs.ftn.qq.com/ftn_handler/393789bfcb014d6799f1445cbc31a3abb8915f8220fe8fbec4d3f0ba847c48252729a0666e5161d62da0bb2aba4f25a4945b10a4b1f2095a892344db5e64c94c/?fname=node-v12.14.1-x64.msi&k=2c3937356465e1cdfcdc15314235051c540a0103065151024b0b0f025318030051581a5455070e1e040e0f005d575555530d0e0d6420375d095d52181204051d570d1904494d01074854445c6441&fr=00&&txf_fid=991d104663800bba790a73dd771322c86ff392e1" target="_blank" rel="noopener">node下载</a>  </p>
-<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h3><p>安装完node环境后，本地cmd运行  </p>
-<pre><code>npm install -g hexo-cli  
-</code></pre><p>然后<code>hexo -v</code>查看版本  </p>
-<h3 id="3-hexo初始化"><a href="#3-hexo初始化" class="headerlink" title="3.hexo初始化"></a>3.hexo初始化</h3><p>本地cmd执行以下命令(默认目录，不管他，一般在administrator的文档目录)  </p>
-<pre><code>hexo init myblog &amp;&amp; cd myblog
-npm install  
-</code></pre><h3 id="4-hexo配置"><a href="#4-hexo配置" class="headerlink" title="4.hexo配置"></a>4.hexo配置</h3><p>打开myblog文件夹，首先打开package.json，添加如下script<br>如下图：特别注意1、2两个地方，现有的就更改，没有的就增加<br><img src="/img/pack.jpg" alt="package配置"></p>
-<h3 id="5-本地测试"><a href="#5-本地测试" class="headerlink" title="5.本地测试"></a>5.本地测试</h3><p>执行代码<code>npm run start</code>开启本地测试，打开浏览器，访问127.0.0.1:4000打开hexo页面<br><img src="/img/hexo.jpg" alt="hexo默认页面">  </p>
-<table>
-<tr>
-<td bgcolor=#FFFF0>
-<strong><font color="#FF0000">【日志列表排序插件】</font></strong>
-</td>
-</tr>
-</table>
-执行以下命令，日志列表才能按照顺序来排序,同时也带了置顶功能，编写文章，加入一个`top:`即可：  
+        <h2 id="直播学习心得"><a href="#直播学习心得" class="headerlink" title="直播学习心得"></a>直播学习心得</h2><h4 id="1-if使用"><a href="#1-if使用" class="headerlink" title="1.if使用"></a>1.if使用</h4><p><code>填表公式、业务公式、匹配条件、执行条件</code>均可执行if语句，但属<code>填表公式</code>的赋值最常用，也最适合</p>
+<h4 id="2-多主键关系"><a href="#2-多主键关系" class="headerlink" title="2.多主键关系"></a>2.多主键关系</h4><p>主表或者明细表勾选<code>主键</code>，代表几个”主键”之间的关系为and，非or，即为多条件唯一</p>
 
-<pre><code>npm install hexo-generator-index-pin-top --save  
-</code></pre><h3 id="6-本地git"><a href="#6-本地git" class="headerlink" title="6.本地git"></a>6.本地git</h3><p>下载git,默认安装路径,<br><a href="http://sz-btfs.ftn.qq.com/ftn_handler/088af645b19c44bf57aad409d4b099c72699f4a19d0b9488dbd03db94546a14208093863060f90efa46a43e629e71b5d598158104d7382f9fe9eab44a2640da5/?fname=Git-2.25.0-64-bit.exe&k=7b306463d1e20ec4abd5466747330616555600535151005a1c515601581e005f0508490104560114075650075001525a025152576126347e584449514f010117011d52574c515d4d1f551c066147&fr=00&&txf_fid=af87796ee35491daae8ae0864063e7f4357cb6f2" target="_blank" rel="noopener">git下载</a><br>打开git的.ssh目录<code>(我的是C:\Users\Administrator\.ssh)</code>，然后右键git bash如下图<br><img src="/img/git.jpg" alt="git"><br>执行如下命令：</p>
-<pre><code>git config --global user.name &quot;你的用户名&quot;  
-git config --global user.email 你的邮箱  
-ssh-keygen -t rsa -C &quot;你的邮箱&quot;  
-git config --global core.autocrlf false //禁用自动转换，这个不设置后面上传时会出现警告  
-</code></pre><p>然后得到和我同样的两个文件(压缩包不算，是我自己压缩的,known_hosts这个是本地ssh链接服务器生成的)<br>最后特别注意，一定要执行以下命令安装本地的一个git上传hexo插件</p>
-<table>
-<tr>
-<td bgcolor=#FFFF0>
-<strong><font color="#FF0000">【git上传插件】</font></strong>
-</td>
-</tr>
-</table>  
-
-<pre><code>npm install hexo-deployer-git --save  
-</code></pre><h2 id="二、linux环境【服务器】"><a href="#二、linux环境【服务器】" class="headerlink" title="二、linux环境【服务器】"></a>二、linux环境【服务器】</h2><p>以centos系统为例，我这里吧我的ubuntu换成centos8了<br><img src="/img/ghxt.jpg" alt="更换系统">  </p>
-<h3 id="1-搭建git环境"><a href="#1-搭建git环境" class="headerlink" title="1.搭建git环境"></a>1.搭建git环境</h3><p>xshell进入后台，安装git  </p>
-<pre><code>yum install git  
-</code></pre><p>然后  </p>
-<pre><code>git --version  
-</code></pre><p>查看git版本<br>创建一个git用户，然后按照以下代码步骤一步一步完成：  </p>
-<pre><code>adduser git //添加git用户
-passwd git // 设置git密码  
-su git // 切换用户  
-cd /home/git/   //进入git目录  
-mkdir -p projects/blog // 创建文件来放置hexo静态工程  
-mkdir repos &amp;&amp; cd repos //创建文件放置git仓库  
-git init --bare blog.git // 创建一个裸露的仓库  
-cd blog.git/hooks  //进入钩子目录
-vi post-receive //创建hook钩子函数(git提交时自动部署)  
-
-hook钩子函数内容:  (注xshell命令vi/vim这两个命令的用法，输入之后按一下i字母键代表输入，输入完了之后，先按Esc键，再输入:wq代表保存退出，:q是退出不保存)
-#!/bin/sh 
-git --work-tree=/home/git/projects/blog --git-dir=/home/git/repos/blog.git checkout -f  
-</code></pre><p>修改权限  </p>
-<pre><code>chmod +x post-receive
-exit // 退出到 root 登录
-chown -R git:git /home/git/repos/blog.git // 添加权限  
-</code></pre><p>到这里服务器git环境搭建完成，测试下能否可能服务器的目录到本地：<br>随便打开一个文件夹，输入以下命令：  </p>
-<pre><code>git clone git@server_ip:/home/git/repos/blog.git  
-</code></pre><p>成功以后如图<br><img src="/img/gittest.jpg" alt="克隆ok">  </p>
-<h3 id="2-建立ssh免密登录："><a href="#2-建立ssh免密登录：" class="headerlink" title="2.建立ssh免密登录："></a>2.建立ssh免密登录：</h3><p>这里注意，还是git用户，不能退出，不能切换到root管理用户<br>创建authorized_keys文件  </p>
-<pre><code>su git     //切换git用户
-cd /home/git   //进入git目录
-mkdir .ssh  //创建免密公匙目录
-cd /home/git/.ssh  //注意是用git用户进这个目录，不是root
-touch authorized_keys  //存放客户端的ssh公钥(id_rsa.pub)  
-chmod 600 authorized_keys   //配置权限  
-cd .. //退出.ssh目录  
-chmod 700 .ssh  //.ssh目录必须700权限  
-</code></pre><p>然后用winscap远程连接服务器，打开这个文件，注意看以下操作：<br>客户端本地(就是我自己的电脑)进入.ssh目录，右键git bash，同上面的操作，然后输入如下命令:<br><code>cat id_rsa.pub</code>，复制公匙key，从ssh-rsa开始复制到最后的邮箱地址.com,如下图:<br><img src="/img/pubkey.jpg" alt="免密key"><br>粘贴到刚刚前面winscap打开的authorized_keys里面，复制完了注意，粘贴的时候后面不能有任何的空格和回车，最后是鼠标点到最后，按del键清空下，这里就是把本地的id_rsa.pub内容复制到authorized_keys里面<br>测试下能否本地免密登录，首次联系会提示你输入<code>yes</code>，然后输入密码，如下图<br><img src="/img/fist.jpg" alt="首次连接"><br><img src="/img/sslok.jpg" alt="免密成功"><br>到此免密成功！</p>
-<h3 id="3-限制git登录"><a href="#3-限制git登录" class="headerlink" title="3.限制git登录"></a>3.限制git登录</h3><p>git用户的登录权限禁掉，只能clone和push，修改目录/etc/下面的passwd文件  </p>
-<pre><code>cat /etc/shells // 查看`git-shell`是否在登录方式里面，有则跳过
-which git-shell // 查看是否安装 
-vi /etc/shells
-添加(which git-shell)显示出来的路劲，通常在 /usr/bin/git-shell
-</code></pre><p>修改</p>
-<pre><code>cd /etc  
-vi passwd
-</code></pre><p>更改方式如下：</p>
-<pre><code>将原来的
-git:x:1000:1000:,,,:/home/git:/bin/bash //原来的
-修改为:
-git:x:1000:1000:,,,:/home/git:/usr/bin/git-shell //修改后的  
-</code></pre><h3 id="4-nginx配置"><a href="#4-nginx配置" class="headerlink" title="4.nginx配置"></a>4.nginx配置</h3><p>这里非常重点，特别注意，容易出很多错。所以在root根目录，先执行以下几个命令，执行过程中就不会报错了:  </p>
-<pre><code>yum update  //更新  
-yum -y install pcre-devel openssl openssl-devel  
-yum -y install gcc-c++  
-yum install -y zlib-devel  
-</code></pre><p>然后安装nginx，执行以下命令，一步一步来:  </p>
-<pre><code>centos8系统自带nginx，所以直接yum  
-yum install nginx  //安装
-nginx -t  //测试安装  
-systemctl enable nginx  //添加系统自启动
-systemctl start nginx  //启动服务,还有stop/restart  
-</code></pre><p>以上代码只要前面的环境都安装了，到这里不会报任何错误的，然后修改nginx配置文件：  </p>
-<pre><code>cd /etc/nginx/
-vi nginx.conf
-修改 root 路径为: /home/git/projects/blog; 
-同时将 user 改为 root  
-</code></pre><p>如下图，改三个地方：<br><img src="/img/nginxconf.jpg" alt="修改处">  </p>
-<pre><code>#user everyone;修改为user root; //注意去掉#字符  
-server_name localhost;修改为server_name 你的域名or公网IP  
-root index;修改为root /home/git/projects/blog; 
-</code></pre><p>改完后记得<code>systemctl restart nginx</code>，就可以访问你的域名啦</p>
-<pre><code>npm  run  start  
-</code></pre><h3 id="5-修改hexo配置"><a href="#5-修改hexo配置" class="headerlink" title="5.修改hexo配置"></a>5.修改hexo配置</h3><p>返回本地hexo根目录，找到_system.yml，代码样式如下   </p>
-<pre><code>deploy:
-  type: git
-  repo: git@serverId:/home/git/repos/blog.git  //serverID是你的服务器地址或者git地址
-  branch: master   
-</code></pre><p>如果有多个仓库，repo这里填写方式一定要特别注意：  </p>
-<pre><code>repo:
-  linxu: git@serverId:/home/git/repos/blog.git //注意缩进
-  github: git@your git site    //注意缩进
-</code></pre><p>每个仓库都可以命名一个名称,我自己的就写的linxu,还有例如github等等，这个可以随便写，没有规定，但是要  </p>
-<p>特别注意，多个仓库并列，必须要缩进，不能和repo并齐，否则上传会出错</p>
-<h3 id="6-上传测试"><a href="#6-上传测试" class="headerlink" title="6.上传测试"></a>6.上传测试</h3><p>至此，所有配置均完成，然后本地cmd写一篇文章测试下</p>
-<pre><code>hexo new hello
-</code></pre><p>生成的hello.md文件在<code>myblog/source/_pos</code>下面，打开可以看到发现默认的文章title就是你新建的hello.md</p>
-<p>的hello，这里有个小技巧，修改<code>myblog\scaffolds</code>下面的post.md，如下：</p>
-<pre><code>title: {{ title }}  //标题：注意窍门，hexo new的是你网页打开的链接显示，title可以改成中文
-date: {{ date }}  //时间轴
-top:   //置顶排序，数字越大越靠前
-categories:   //分类
-tags:   //标签
-</code></pre><p>这样下次新建文章，就带有上面的这些字段了，</p>
-<h2 id="三、部署完成"><a href="#三、部署完成" class="headerlink" title="三、部署完成"></a>三、部署完成</h2><h3 id="1-总结"><a href="#1-总结" class="headerlink" title="1.总结"></a>1.总结</h3><blockquote>
-<p>回顾从2008年开始入坑座网站，到现在共12年了，中间陆陆续续中断了几年，经历了纠结域名、纠结sitemap、纠结商业化、纠结JS/CSS/PHP/HTML等等，到去年年底，已经几年没碰网站的我，又重新开始了这一切，不过人到中年，不纠结了，有一个喜欢的域名、一个国内的小水管服务器，再备案，落伍太久的我，一开始选择的还是多年前沿用的emlog，结果发现emlog无故把我的论坛账号封停了，就转战typecho，无意中发现hexo的这个主题3-hexo，所以就又转过来了，前后花了半个月的时间，因为不懂hexo的模式，钻研了下服务器的使用和git的使用。</p>
-</blockquote>
-<p>总归：</p>
-<p>​      部署完成，web维持正常更博即可，转移重心到正轨：<code>xls系统开发</code>和<code>Python学习</code></p>
-<p>ps：我的服务器是不知道哪里的小水管，不是阿里云的，所以增加了一下步骤：</p>
-<p>服务器远程操作，开放443端口</p>
-<p>1.先查看服务器防火墙开放的端口</p>
-<pre><code>firewall-cmd --zone=public --list-ports     //查看防火墙的开放端口
-</code></pre><p>2.允许防火墙放行443端口</p>
-<p>　　命令含义：</p>
-<p>　　　　–zone #作用域</p>
-<p>　　　　–add-port=443/tcp #添加端口，格式为：端口/通讯协议</p>
-<p>　　　　–permanent #代表永久生效，没有此参数重启后失效</p>
-<pre><code>firewall-cmd --zone=public --add-port=443/tcp --permanent
-</code></pre><p>3.重启防火墙</p>
-<pre><code>firewall-cmd --reload
-</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
     </div>
@@ -907,12 +752,12 @@ tags:   //标签
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>【傻瓜式】史上最详细的hexo部署到个人服务器 (git+nginx+hexo)</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">2.2k</span></p>
+    <p><span class="copy-title">文章标题:</span>xls系统开发(7)：学习心得</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">88</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="程忧">程忧</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-01-29, 19:44:28</p>
-    <p><span class="copy-title">最后更新:</span>2020-02-22, 20:11:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/29/code-hexo-git-nginx/" title="【傻瓜式】史上最详细的hexo部署到个人服务器 (git+nginx+hexo)">https://www.chenuon.com/2020/01/29/code-hexo-git-nginx/</a>
+    <p><span class="copy-title">发布时间:</span>2020-02-22, 10:48:44</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-22, 11:04:48</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/22/xlserp-study-record/" title="xls系统开发(7)：学习心得">https://www.chenuon.com/2020/02/22/xlserp-study-record/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
