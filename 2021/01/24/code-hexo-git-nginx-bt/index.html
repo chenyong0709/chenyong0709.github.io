@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>塵幽·点滴</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="塵幽·点滴">
+  <title>云服务器通过宝塔部署hexo博客 | 塵幽·点滴</title>
+  <meta name="keywords" content=" hexo , git , nginx , node , linux ">
+  <meta name="description" content="云服务器通过宝塔部署hexo博客 | 塵幽·点滴">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于程忧入坑2019&#x2F;11&#x2F;26：开始重新入坑博客，注册chenuon.cn域名，购买香港虚拟空间，搭建emlog博客程序，同时备案 2019&#x2F;12&#x2F;09：因emlog无故封停我em论坛的账号，多次联系无果，转战typecho程序 2020&#x2F;01&#x2F;17：只因一眼相望，发现了hexo轻量级静态博客程序，主要是发现了3-hexo主题，自此，折腾开始 折腾初级症状：下载软件node&#x2F;git&#x2F;hexo，根">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/cutx.jpg" />
@@ -702,12 +702,58 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-code-hexo-git-nginx-bt" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Something-i-tell-you"><span class="toc-text">Something i tell you</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#联系方式："><span class="toc-text">联系方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原主题修改部分"><span class="toc-text">原主题修改部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感恩有你"><span class="toc-text">感恩有你</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于塵幽·点滴"><span class="toc-text">关于塵幽·点滴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">云服务器通过宝塔部署hexo博客</h1>
+    
+    <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
+        
+        
+        
+        <span class="book">
+            
+                <a  data-rel="程序源码">程序源码</a>/
+            
+                <a  data-rel="hexo">hexo</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color5">hexo</a>
+            
+            <a class="color4">git</a>
+            
+            <a class="color1">nginx</a>
+            
+            <a class="color5">node</a>
+            
+            <a class="color1">linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2021-01-24 21:13:53'>2021-01-24 10:09</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:557</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、宝塔搭建"><span class="toc-text">一、宝塔搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、git搭建"><span class="toc-text">二、git搭建</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -720,55 +766,87 @@
     }
 </style>
 </div>
-            <h1 id="Something-i-tell-you"><a href="#Something-i-tell-you" class="headerlink" title="Something i tell you"></a>Something i tell you</h1><h2 id="联系方式："><a href="#联系方式：" class="headerlink" title="联系方式："></a>联系方式：</h2><p>如有任何关于文章的问题，联系作者：  </p>
-<ol>
-<li>wechat：chenyong0709  </li>
-<li>qq：69395866  </li>
-<li>mail：<a href="mailto:69395866@qq.com">69395866@qq.com</a>  </li>
-</ol>
-<h2 id="原主题修改部分"><a href="#原主题修改部分" class="headerlink" title="原主题修改部分"></a>原主题修改部分</h2><p>以下所有修改只为提高博客的访问质量： <strong><font color = red>轻、快</font></strong>  </p>
-<ul>
-<li><p>关闭快捷按键</p>
-</li>
-<li><p>关闭gitalk评论，开启valine  </p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>云服务器到期，更换了阿里云的云服务器，重新搭建了一次hexo<br>在此过程中，发现了一年前写的这篇文章  </p>
 <blockquote>
-<p>考虑再三，还是关闭了评论，太影响访问速度了。有问题找作者，联系方式在上面</p>
+<p><a href="https://www.chenuon.cn/2020/01/29/code-hexo-git-nginx/" target="_blank" rel="noopener">【傻瓜式】史上最详细的hexo部署到个人服务器 (git+nginx+hexo)</a>  </p>
 </blockquote>
-</li>
-<li><p>更换主题配置所有cdn为七牛cdn</p>
-</li>
-<li><p>关闭不蒜子统计</p>
-</li>
-<li><p>本地化列表背景图片  </p>
+<p>有些不足，目前已修正更新，后续有什么好的方式方法会持续更新  </p>
+<p>同时思考新的思路  </p>
 <blockquote>
-<p>原图800多kb，我调整了下分辨率，现在只有90多k了  </p>
+<p>初阶：如何在云服务器上面通过宝塔部署hexo静态博客<br>中阶：如何在云服务器上面通过宝塔部署hexo静态博客 和 其他非静态站点  </p>
 </blockquote>
-</li>
-<li></li>
-</ul>
-<h2 id="感恩有你"><a href="#感恩有你" class="headerlink" title="感恩有你"></a>感恩有你</h2><p>真的感谢这大半个月的时间，以下Q群组和Q个人对我的帮忙，再次记录铭记：</p>
-<blockquote>
-<p>QQ群：hexo（287306637）</p>
-<p>向阳：QQ（86182824）  //大神已加好友</p>
-<p>早安：QQ（576323366）    //大神只接收群咨询，不加好友- -!</p>
-</blockquote>
-<h2 id="关于塵幽·点滴"><a href="#关于塵幽·点滴" class="headerlink" title="关于塵幽·点滴"></a>关于塵幽·点滴</h2><p>本站是一个个人网站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章，共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次，访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://www.yatuyun.com/" target="_blank" rel="noopener">雅图云</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 原作者已在github上开源，所以我做了部分更改</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-</ul>
+<h1 id="一、宝塔搭建"><a href="#一、宝塔搭建" class="headerlink" title="一、宝塔搭建"></a>一、宝塔搭建</h1><p>这个一般搭建服务器的都知道，按照官方教程搭建就好了。<br>记住最后显示出来的控制面板地址和账号密码  </p>
+<h1 id="二、git搭建"><a href="#二、git搭建" class="headerlink" title="二、git搭建"></a>二、git搭建</h1><p>这里是git服务器搭建,xshell操作：  </p>
+<pre><code>yum install git    //服务器安装git  
+git --version      //查看git版本  
+adduser git        //添加git用户  
+passwd git         //设置git密码，这里要输两次  
+chmod 740 /etc/sudoers   //改权限方便修改内容  
+vim /etc/sudoers   //修改文件  
+&gt;找到以下内容  
+&gt;## Allow root to run any commands anywhere  
+&gt;root    ALL=(ALL)     ALL  
+在下面添加一行  
+&gt;git     ALL=(ALL)       ALL  
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+保存退出后，改回权限  
+&gt; chmod 400 /etc/sudoers   //改回权限  
+&gt; su git   //切换git用户  
+&gt; cd /home/git   //进入git目录  
+&gt; mkdir repos &amp;&amp; cd repos  //创建文件放置git仓库--&gt;这个后续本地上传的仓库  
+&gt; git init --bare blog.git // 创建一个裸露的仓库（初始化）  
+&gt; cd blog.git/hooks  //进入钩子目录  
+&gt; vi post-receive //创建hook钩子函数(git提交时自动部署)  
+&gt; #!/bin/sh  
+&gt; git --work-tree=/www/wwwroot/bbs --git-dir=/home/git/repos/blog.git checkout -f  
+
+然后修改权限  
+&gt; chmod +x post-receive  
+&gt; exit // 退出到 root 登录  
+&gt; chown -R git:git /home/git/repos/blog.git // 添加权限,防止钩子文件被git clone  
+</code></pre><p>到这里服务器git环境搭建完成，测试下能否可能服务器的目录到本地：<br>随便打开一个文件夹，输入以下命令：  </p>
+<pre><code>git clone git@server_ip:/home/git/repos/blog.git  </code></pre><p>成功以后如图<br><img src="/img/gittest.jpg" alt="克隆ok">    </p>
+<p>接下来进行免密操作:  </p>
+<blockquote>
+<p>“傻瓜式”置顶文章有些，我就不重复了</p>
+</blockquote>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>云服务器通过宝塔部署hexo博客</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">557</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="塵幽">塵幽</a></p>
+    <p><span class="copy-title">发布时间:</span>2021-01-24, 10:09:21</p>
+    <p><span class="copy-title">最后更新:</span>2021-01-24, 21:13:53</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/01/24/code-hexo-git-nginx-bt/" title="云服务器通过宝塔部署hexo博客">https://www.chenuon.com/2021/01/24/code-hexo-git-nginx-bt/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2019-2021 塵幽·点滴</p>
