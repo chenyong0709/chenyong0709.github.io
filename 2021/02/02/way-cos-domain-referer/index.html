@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于程忧点滴 | 塵幽·点滴</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于程忧点滴 | 塵幽·点滴">
+  <title>腾讯云COS自定义域名最新方法[原创] | 塵幽·点滴</title>
+  <meta name="keywords" content=" 腾讯云对象存储 , cos , 自定义域名 ">
+  <meta name="description" content="腾讯云COS自定义域名最新方法[原创] | 塵幽·点滴">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于程忧入坑2019&#x2F;11&#x2F;26：开始重新入坑博客，注册chenuon.cn域名，购买香港虚拟空间，搭建emlog博客程序，同时备案 2019&#x2F;12&#x2F;09：因emlog无故封停我em论坛的账号，多次联系无果，转战typecho程序 2020&#x2F;01&#x2F;17：只因一眼相望，发现了hexo轻量级静态博客程序，主要是发现了3-hexo主题，自此，折腾开始 折腾初级症状：下载软件node&#x2F;git&#x2F;hexo，根">
 <meta property="og:type" content="website">
@@ -724,24 +724,40 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-way-cos-domain-referer" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于程忧点滴</h1>
+        <h1 class="article-title">腾讯云COS自定义域名最新方法[原创]</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a  data-rel="技巧应用">技巧应用</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color3">腾讯云对象存储</a>
+            
+            <a class="color4">cos</a>
+            
+            <a class="color1">自定义域名</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-06 20:53:01'>2020-01-30 00:21</time>
+        创建时间:<time class="date" title='更新时间: 2021-02-03 11:40:50'>2021-02-02 11:18</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:448</span>
+        <span>字数:474</span>
         
         
         
@@ -749,7 +765,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于程忧"><span class="toc-text">关于程忧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#入坑"><span class="toc-text">入坑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#折腾"><span class="toc-text">折腾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消停"><span class="toc-text">消停</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、cos创建"><span class="toc-text">一、cos创建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、cos配置"><span class="toc-text">二、cos配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、cos传图"><span class="toc-text">三、cos传图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结："><span class="toc-text">总结：</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -765,23 +781,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="关于程忧"><a href="#关于程忧" class="headerlink" title="关于程忧"></a>关于程忧</h1><h2 id="入坑"><a href="#入坑" class="headerlink" title="入坑"></a>入坑</h2><p>2019/11/26：开始重新入坑博客，注册chenuon.cn域名，购买香港虚拟空间，搭建emlog博客程序，同时备案</p>
-<p>2019/12/09：因emlog无故封停我em论坛的账号，多次联系无果，转战typecho程序</p>
-<p>2020/01/17：只因一眼相望，发现了hexo轻量级静态博客程序，主要是发现了3-hexo主题，自此，折腾开始</p>
-<h2 id="折腾"><a href="#折腾" class="headerlink" title="折腾"></a>折腾</h2><p>初级症状：下载软件node/git/hexo，根据网上教程，本地测试搭建成功</p>
-<p>中级症状：本地下载3-hexo主题并成功切换，一贯操作猛如虎，更改相关涉及原著代码为自己的相关信息</p>
-<p>高级症状：无限搜索网络教程，研究如何部署github，如何免密，如何git clone/git push</p>
-<p>重度症状：</p>
-<ul>
-<li><p>1、主题症：如何分类/标签，文章列表日期排序问题折腾，关闭不蒜子评论，关闭快捷键，修改图标，修改ico，修改cdn……等等，优化主题问题，目的就是为了网站的访问速度提升</p>
-</li>
-<li><p>2、linux症：申请一台免费试用阿里云1g1h1m一个月，开始无限折腾git+nginx+hexo的问题，centos/ubuntu之间多次切换，本人以前一直未接触服务器这一块，所以担心是否系统不同导致命令无法执行，</p>
-</li>
-<li><p>3、nginx症：也是最严重的问题，多次请教了hexo群内的大神，远程帮我操作才发现自己的问题，同时解决ssl的问题，也走了不少坑。</p>
-</li>
-</ul>
-<h2 id="消停"><a href="#消停" class="headerlink" title="消停"></a>消停</h2><p>2020/02/05：经过数次的阿里云试用服务器的模拟，终于在今天正式成功一遍部署成功</p>
-<p>2020/02/06：正式上线个人服务器，完成部署</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>为了把小站的图片资源转移到腾讯云对象存储cos上面，自己摸索和实战了三天，终于弄明白了腾讯的cos存储桶内的相关设置。<br>要求如下：  </p>
+<blockquote>
+<p>1.<strong><em>使用自定义备案域名访问腾讯云cos</em></strong><br>2.<strong><em>如何开启ssl</em></strong><br>3.<strong><em>如何开启防盗链</em></strong>  </p>
+</blockquote>
+<h1 id="一、cos创建"><a href="#一、cos创建" class="headerlink" title="一、cos创建"></a>一、cos创建</h1><p>这里基本玩对象存储的都懂，如下图<br><img src="https://img.chenuon.cn/img/cunchutong.jpg" alt="创建存储桶"><br>注意存储桶的权限必须是私有读写</p>
+<h1 id="二、cos配置"><a href="#二、cos配置" class="headerlink" title="二、cos配置"></a>二、cos配置</h1><p>这里介绍下腾讯云对象存储配置：  </p>
+<ol>
+<li>如何自定义域名访问cos存储桶的文件<br><img src="https://img.chenuon.cn/img/cdndomain.jpg" alt="自定义cdn加速域名"><br>注意图中的 ① ②  两个位置的选择<br>这里是我自己的配置，发出来仅供参考  </li>
+<li>如何开启防盗链<br>参考如下图一<br><img src="https://img.chenuon.cn/img/referer1.jpg" alt="防盗链1"><br>参考如下图二<br><img src="https://img.chenuon.cn/img/referer2.jpg" alt="防盗链2"><br>这里注意图二中的标识①的地方，一定要选择允许，否则浏览器直接输入图片地址不能访问<br>原理一直没弄懂，我也是根据referer的提示，试过无数次才弄明白<br>在我的主站内可以引用图片能访问，但是单独复制图片的浏览地址去访问，就直接404了。  </li>
+</ol>
+<h1 id="三、cos传图"><a href="#三、cos传图" class="headerlink" title="三、cos传图"></a>三、cos传图</h1><p>腾讯云对象存储(cos)的上传下载很简单，控制台有相应的工具下载<br>然后在密匙管理里面找到id和key，即可食用cosbrower，如下图<br>图一<br><img src="https://img.chenuon.cn/img/cosbrowser.jpg" alt="传图工具"><br>图二<br><img src="https://img.chenuon.cn/img/key1.jpg" alt="id_key">  </p>
+<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><p>断断续续测试了三天才弄明白这个新版的控制台如何自定义域名<br>同时防盗链也是绕了很多弯路，referer自始至终没弄的很懂<br>个人理解 空头 意思就是浏览器直接访问吧，如果不勾选，浏览器没办法直接打开图片地址的<br>但是在设置的白名单里面可以引入图片，白名单的站点内可以显示。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
@@ -793,6 +804,18 @@
     <a  class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>腾讯云COS自定义域名最新方法[原创]</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">474</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="塵幽">塵幽</a></p>
+    <p><span class="copy-title">发布时间:</span>2021-02-02, 11:18:44</p>
+    <p><span class="copy-title">最后更新:</span>2021-02-03, 11:40:50</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/02/02/way-cos-domain-referer/" title="腾讯云COS自定义域名最新方法[原创]">https://www.chenuon.com/2021/02/02/way-cos-domain-referer/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
