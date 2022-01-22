@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Python和PyCharm软件下载 | 塵幽·点滴</title>
-  <meta name="keywords" content=" python , pycharm ">
-  <meta name="description" content="Python和PyCharm软件下载 | 塵幽·点滴">
+  <title>github-git-hexo | 塵幽·点滴</title>
+  <meta name="keywords" content=" hexo , git , github ">
+  <meta name="description" content="github-git-hexo | 塵幽·点滴">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="building……">
 <meta property="og:type" content="website">
@@ -736,9 +736,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-tools-python-pycharm-down" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-code-github-git-hexo" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Python和PyCharm软件下载</h1>
+        <h1 class="article-title">github-git-hexo</h1>
     
     <div class="article-meta">
         
@@ -746,28 +746,32 @@
         
         <span class="book">
             
-                <a  data-rel="常用软件">常用软件</a>
+                <a  data-rel="程序源码">程序源码</a>/
+            
+                <a  data-rel="hexo">hexo</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color2">python</a>
+            <a class="color5">hexo</a>
             
-            <a class="color3">pycharm</a>
+            <a class="color4">git</a>
+            
+            <a class="color2">github</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-08 12:23:18'>2019-11-28 15:03</time>
+        创建时间:<time class="date" title='更新时间: 2022-01-22 14:58:01'>2022-01-22 14:33</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:143</span>
+        <span>字数:183</span>
         
         
         
@@ -775,7 +779,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建前提"><span class="toc-text">搭建前提</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载地址"><span class="toc-text">下载地址</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载地址二"><span class="toc-text">下载地址二</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#程序迁移github"><span class="toc-text">程序迁移github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何国内加速github域名"><span class="toc-text">如何国内加速github域名</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -791,12 +795,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="搭建前提"><a href="#搭建前提" class="headerlink" title="搭建前提"></a>搭建前提</h1><p>必须是win7sp1以上的系统<br>我自己折腾了一整天，用的公司的电脑，还接了自己的一块SSD，<br>我首选itellyou的官方原版安装版系统，各种硬盘问题，<br>各种版本问题，结果还是失败了，<br>最后还是选择了深度纯净ghost，系统之家下载即可</p>
-<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><table><tr><td bgcolor=#FFFF0><strong><font color="#FF0000">以下是python的下载和pycharm的下载+汉化+补丁</font></strong></td></tr></table>
-### 下载地址一
-链接: https://pan.baidu.com/s/1u-TUSEIpnLJZLacYMFoAvQ 提取码: tmhs
-
-<h3 id="下载地址二"><a href="#下载地址二" class="headerlink" title="下载地址二"></a>下载地址二</h3><p><a href="https://cloud.189.cn/t/zqq6fyUfQRNj（访问码：0997）" target="_blank" rel="noopener">https://cloud.189.cn/t/zqq6fyUfQRNj（访问码：0997）</a></p>
+        <h1 id="程序迁移github"><a href="#程序迁移github" class="headerlink" title="程序迁移github"></a>程序迁移github</h1><p>因阿里云服务器到期，小站迁移到了github，<br>考虑许多，确实单买一个服务器非常浪费，也没做什么用<br>所以再三思虑，还是整体迁移到了github<br>几个重点记录一下  </p>
+<blockquote>
+<p>github申请、注册、创建库流程不多说<br>本地ssh密匙上传到github的setting-&gt;page页面<br>修改hexo上传地址如下<br><code>github: git@github.com:xxx/xxx.github.io.git</code>  //这里注意吧xxx换成自己的库名  </p>
+</blockquote>
+<h2 id="如何国内加速github域名"><a href="#如何国内加速github域名" class="headerlink" title="如何国内加速github域名"></a>如何国内加速github域名</h2><p>首先确保个人域名已备案，不然CDN添加的时候不能通过<br>然后我用的是腾讯的CDN，进入页面，如下图<br><img src="https://img.chenuon.cn/img/github.png" alt="github腾讯加速cdn设置"></p>
+<p>最后本地<code>npm run deploy</code>完成上传即可~</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
@@ -810,12 +814,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Python和PyCharm软件下载</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">143</span></p>
+    <p><span class="copy-title">文章标题:</span>github-git-hexo</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">183</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="塵幽">塵幽</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-28, 15:03:18</p>
-    <p><span class="copy-title">最后更新:</span>2020-02-08, 12:23:18</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/28/tools-python-pycharm-down/" title="Python和PyCharm软件下载">https://www.chenuon.cn/2019/11/28/tools-python-pycharm-down/</a>
+    <p><span class="copy-title">发布时间:</span>2022-01-22, 14:33:33</p>
+    <p><span class="copy-title">最后更新:</span>2022-01-22, 14:58:01</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/01/22/code-github-git-hexo/" title="github-git-hexo">https://www.chenuon.cn/2022/01/22/code-github-git-hexo/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
