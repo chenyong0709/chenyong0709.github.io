@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>xls系统开发(5)：数据更改生成记录日志 | 塵幽·点滴</title>
-  <meta name="keywords" content=" 云表 ">
-  <meta name="description" content="xls系统开发(5)：数据更改生成记录日志 | 塵幽·点滴">
+  <title>巧用alist挂载各大网盘 | 塵幽·点滴</title>
+  <meta name="keywords" content=" alist , drive , 网盘 , 阿里云盘 ">
+  <meta name="description" content="巧用alist挂载各大网盘 | 塵幽·点滴">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于程忧入坑2019&#x2F;11&#x2F;26：开始重新入坑博客，注册chenuon.cn域名，购买香港虚拟空间，搭建emlog博客程序，同时备案 2019&#x2F;12&#x2F;09：因emlog无故封停我em论坛的账号，多次联系无果，转战typecho程序 2020&#x2F;01&#x2F;17：只因一眼相望，发现了hexo轻量级静态博客程序，主要是发现了3-hexo主题，自此，折腾开始 折腾初级症状：下载软件node&#x2F;git&#x2F;hexo，根">
 <meta property="og:type" content="website">
@@ -788,9 +788,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-xlserp-change-record" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-code-alist-drive" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">xls系统开发(5)：数据更改生成记录日志</h1>
+        <h1 class="article-title">巧用alist挂载各大网盘</h1>
     
     <div class="article-meta">
         
@@ -798,26 +798,34 @@
         
         <span class="book">
             
-                <a  data-rel="xls开发">xls开发</a>
+                <a  data-rel="程序源码">程序源码</a>/
+            
+                <a  data-rel="alist">alist</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color3">云表</a>
+            <a class="color1">alist</a>
+            
+            <a class="color1">drive</a>
+            
+            <a class="color3">网盘</a>
+            
+            <a class="color5">阿里云盘</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-17 17:11:57'>2020-02-16 17:03</time>
+        创建时间:<time class="date" title='更新时间: 2023-02-19 13:53:43'>2023-02-19 11:35</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:395</span>
+        <span>字数:822</span>
         
         
         
@@ -825,7 +833,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、开发主题"><span class="toc-text">一、开发主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、开发过程"><span class="toc-text">二、开发过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#保存表单前-填表公式"><span class="toc-text">保存表单前[填表公式]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#保存表单后-业务公式"><span class="toc-text">保存表单后[业务公式]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、拓展思考"><span class="toc-text">三、拓展思考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装过程"><span class="toc-text">安装过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、下载"><span class="toc-text">1、下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、安装"><span class="toc-text">2、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、启动-amp-停止"><span class="toc-text">3、启动 &amp; 停止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、注意"><span class="toc-text">4、注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、挂载网盘"><span class="toc-text">5、挂载网盘</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1、阿里云盘分享"><span class="toc-text">5.1、阿里云盘分享</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2、其他网盘挂载"><span class="toc-text">5.2、其他网盘挂载</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -841,23 +849,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、开发主题"><a href="#一、开发主题" class="headerlink" title="一、开发主题"></a>一、开发主题</h2><p>部分表单模板需要针对其中的数据更改做出记录，以便于后期查询</p>
-<h2 id="二、开发过程"><a href="#二、开发过程" class="headerlink" title="二、开发过程"></a>二、开发过程</h2><p>此次开发差点让我陷入崩溃，坐在办公室抽了半包烟，硬坐了5个小时没实现，昨天半夜12点了，人确实很累了，</p>
-<p>脑袋也蒙蒙的，转不动了，所以就休息了，今天早上看了一下资料，突然冒出灵感</p>
-<p>目前存在的问题就是填表公式和业务公式的逻辑顺序关系无法解决，导致日志生成记录混乱，</p>
-<p>要么不记录，要么重复记录，因此，开始如下测试：</p>
-<blockquote>
-<p>新建测试模板，了解各个公式的优先顺序，得出结论：</p>
-<blockquote>
-<p><code>[填表公式]保存表单前</code>事件&gt;<code>[业务公式]保存后事件</code>&gt;<code>[填表公式]保存表单后</code>事件</p>
-</blockquote>
-</blockquote>
-<p>由此，豁然开朗，正确开发过程如下：</p>
-<h4 id="保存表单前-填表公式"><a href="#保存表单前-填表公式" class="headerlink" title="保存表单前[填表公式]"></a>保存表单前[填表公式]</h4><p>在表单模板新增<code>[填表公式]保存表单前</code>事件，选择<code>提示框</code>来进行条件检查，确定是否执行后续内容</p>
-<h4 id="保存表单后-业务公式"><a href="#保存表单后-业务公式" class="headerlink" title="保存表单后[业务公式]"></a>保存表单后[业务公式]</h4><p>新增<code>[业务公式]保存表单后</code>事件，将更新内容返回日志列表</p>
-<h2 id="三、拓展思考"><a href="#三、拓展思考" class="headerlink" title="三、拓展思考"></a>三、拓展思考</h2><p>如果一个表单有多个数据更改，上述每个公式都需要作出单独的重复动作，不可同时进行</p>
-<p>自己也没想到原来如此简单，世界如此美好！</p>
-<p>over &amp;&amp; 未完待续….【待优化修复】</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因前几天阿里云盘更细，alist挂载阿里云盘无法播放影视，在alist的讨论组发现可以挂载阿里云盘分享的还是可以播放</p>
+<p>刚好我的版本是v2.6.1的，不支持阿里云盘分享，且alist开源github作者有说明，新版本v3已发布，不再对v2版本进行开发和维护，所以此次把我自己全新的安装过程和挂载过程记录下来。</p>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><h3 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h3><p>去作者的github仓库<a href="https://github.com/alist-org/alist/releases" target="_blank" rel="noopener">下载</a>对应操作系统的最新版本，解压，比如我是windows系统，解压到<code>D:\alist\</code>目录下</p>
+<h3 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h3><p>当前d:\alist目录下运行cmd，输入<code>alist.exe server</code>命令，会得到一个密码，记得保存下来到txt文档，如下图所示：</p>
+<p><img src="https://img.chenuon.cn/img/alistkey.PNG" alt="密码"></p>
+<p>注意此时先不要关闭此cmd窗口，可打开浏览器输入127.0.01:5244 进入alist的登陆界面，账号admin，密码就是刚刚记录的密码。</p>
+<p>那么此时肯定就有小伙伴问了，难道我每次访问都要开这个程序服务吗？</p>
+<p>答案当然是否定的，继续看操作</p>
+<h3 id="3、启动-amp-停止"><a href="#3、启动-amp-停止" class="headerlink" title="3、启动 &amp; 停止"></a>3、启动 &amp; 停止</h3><p>仍然是当前目录，建立两个txt文本文件，比如<code>启动.txt</code>和<code>停止.txt</code>，各自写入一下代码：</p>
+<p>启动如下：</p>
+<pre><code>Set ws = CreateObject(&quot;Wscript.Shell&quot;)  
+ws.run &quot;alist.exe server&quot;,vbhide</code></pre><p>停止如下：</p>
+<pre><code>Dim Wsh
+Set Wsh = WScript.CreateObject(&quot;WScript.Shell&quot;)
+Wsh.Run &quot;taskkill /f /im alist.exe&quot;,0
+Set Wsh=NoThing
+WScript.quit</code></pre><p>然后保存，更改后缀为.vbs，为了保证每次电脑启动都能访问，那么把启动.vbs发送桌面一个快捷方式，</p>
+<p>然后开始-运行<code>shell:startup</code>将此快捷方式拖进来即可，以后电脑每次启动就能自动运行了，如果想关闭后台，运行停止.vbs即可。</p>
+<h3 id="4、注意"><a href="#4、注意" class="headerlink" title="4、注意"></a>4、注意</h3><p>这几个文件都在一个目录，比如我的<code>D:\alist\</code>下，涵盖这几个文件</p>
+<pre><code>alist.exe
+启动.vbs
+停止.vbs
+date文件夹   \此文件夹是第一次运行alist.exe server时生成的配置文件。</code></pre><h3 id="5、挂载网盘"><a href="#5、挂载网盘" class="headerlink" title="5、挂载网盘"></a>5、挂载网盘</h3><h5 id="5-1、阿里云盘分享"><a href="#5-1、阿里云盘分享" class="headerlink" title="5.1、阿里云盘分享"></a>5.1、阿里云盘分享</h5><p>在作者的网站获取一下阿里云的登陆Token（先点一下获取Token，出来二维码，手机扫码登陆，然后再点一下，就得到一串字符，复制添加进去，比如一下阿里云分享链接密码，</p>
+<pre><code>电视剧
+https://www.aliyundrive.com/s/1j7MY5d1LXA
+提取码: 1eu6
+点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。</code></pre><p>如下图操作</p>
+<p><img src="http://img.chenuon.cn/img/aliyunfx.png" alt="阿里云分享"></p>
+<p>驱动选择<code>阿里云分享</code>，挂载路径填<code>阿里云分享</code>(这里其实就是显示出来的名称)，然后刷新令牌就把上面获取到的Token填写进去，分享ID就是阿里云链接后面那一串代码<code>1j7MY5d1LXA</code>，分享密码，有密码分享的就填写，如果别人分享的链接是无密码链接，那就不用填写。其他地方不用选，然后点添加即可</p>
+<h5 id="5-2、其他网盘挂载"><a href="#5-2、其他网盘挂载" class="headerlink" title="5.2、其他网盘挂载"></a>5.2、其他网盘挂载</h5><p>参考作者<a href="https://alist.nn.ci/zh/guide/" target="_blank" rel="noopener">官方网址</a>指导，当然不懂也可以问我Q:69395866，可以发QQ邮件</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
@@ -871,12 +892,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>xls系统开发(5)：数据更改生成记录日志</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">395</span></p>
+    <p><span class="copy-title">文章标题:</span>巧用alist挂载各大网盘</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">822</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="塵幽">塵幽</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-02-16, 17:03:10</p>
-    <p><span class="copy-title">最后更新:</span>2020-02-17, 17:11:57</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/16/xlserp-change-record/" title="xls系统开发(5)：数据更改生成记录日志">https://www.chenuon.cn/2020/02/16/xlserp-change-record/</a>
+    <p><span class="copy-title">发布时间:</span>2023-02-19, 11:35:29</p>
+    <p><span class="copy-title">最后更新:</span>2023-02-19, 13:53:43</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2023/02/19/code-alist-drive/" title="巧用alist挂载各大网盘">https://www.chenuon.cn/2023/02/19/code-alist-drive/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
