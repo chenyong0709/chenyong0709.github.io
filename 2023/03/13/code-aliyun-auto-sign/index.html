@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于程忧点滴 | 塵幽·点滴</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于程忧点滴 | 塵幽·点滴">
+  <title>无需服务器阿里云盘自动签到并推送消息 | 塵幽·点滴</title>
+  <meta name="keywords" content=" 阿里云盘 , 签到 , github ">
+  <meta name="description" content="无需服务器阿里云盘自动签到并推送消息 | 塵幽·点滴">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人博客–&gt;塵幽·点滴 网址：https:&#x2F;&#x2F;www.chenuon.cn">
 <meta property="og:type" content="website">
@@ -714,24 +714,42 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-code-aliyun-auto-sign" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于程忧点滴</h1>
+        <h1 class="article-title">无需服务器阿里云盘自动签到并推送消息</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a  data-rel="程序源码">程序源码</a>/
+            
+                <a  data-rel="github">github</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color5">阿里云盘</a>
+            
+            <a class="color3">签到</a>
+            
+            <a class="color2">github</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-06 20:53:01'>2020-01-30 00:21</time>
+        创建时间:<time class="date" title='更新时间: 2023-03-13 22:10:03'>2023-03-13 16:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:448</span>
+        <span>字数:913</span>
         
         
         
@@ -739,7 +757,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于程忧"><span class="toc-text">关于程忧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#入坑"><span class="toc-text">入坑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#折腾"><span class="toc-text">折腾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消停"><span class="toc-text">消停</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github配置"><span class="toc-text">github配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行action"><span class="toc-text">运行action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看结果"><span class="toc-text">查看结果</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -755,23 +773,157 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="关于程忧"><a href="#关于程忧" class="headerlink" title="关于程忧"></a>关于程忧</h1><h2 id="入坑"><a href="#入坑" class="headerlink" title="入坑"></a>入坑</h2><p>2019/11/26：开始重新入坑博客，注册chenuon.cn域名，购买香港虚拟空间，搭建emlog博客程序，同时备案</p>
-<p>2019/12/09：因emlog无故封停我em论坛的账号，多次联系无果，转战typecho程序</p>
-<p>2020/01/17：只因一眼相望，发现了hexo轻量级静态博客程序，主要是发现了3-hexo主题，自此，折腾开始</p>
-<h2 id="折腾"><a href="#折腾" class="headerlink" title="折腾"></a>折腾</h2><p>初级症状：下载软件node/git/hexo，根据网上教程，本地测试搭建成功</p>
-<p>中级症状：本地下载3-hexo主题并成功切换，一贯操作猛如虎，更改相关涉及原著代码为自己的相关信息</p>
-<p>高级症状：无限搜索网络教程，研究如何部署github，如何免密，如何git clone/git push</p>
-<p>重度症状：</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>通过github的action功能，实现0服务器每日自动签到 并 利用各种消息通知功能推送，</p>
+<table>
+<tr>
+<td bgcolor=#FFFF0>
+<strong><font color="#FF0000">准备工作/工具：</font></strong>
+</td>
+</tr>
+</table>
+
+<pre><code>1、github账号
+2、push-token</code></pre><h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><p>1,创建一个新的仓库，命名<code>aliyun-signin-action</code></p>
+<blockquote>
+<p>不需要 Fork 本仓库, 采用 <code>uses</code> 的方式引用本仓库 Action, 实现自动更新</p>
+</blockquote>
+<p>2,在仓库中新建文件 <code>.github/workflows/signin.yml</code></p>
+<blockquote>
+<p>用于配置 Github Action 的工作流</p>
+</blockquote>
+<p><img src="https://img.chenuon.cn/img/creat.png" alt="creat.png"></p>
+<p><img src="https://img.chenuon.cn/img/signin.png" alt="signin.png"></p>
+<p>编写内容如下，先贴上完整参数：</p>
+<pre><code>name: Aliyun Signin
+
+on:
+  schedule:
+   # 每天国际时间 17:20 运行一次, 中国时间 01:20
+    - cron: &#39;20 17 * * *&#39;
+  workflow_dispatch:
+jobs:
+  signin:
+    name: Aliyun Signin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ImYrS/aliyun-auto-signin@main
+        with:
+          REFRESH_TOKENS: ${{ secrets.REFRESH_TOKENS }}
+          GP_TOKEN: ${{ secrets.GP_TOKEN}}
+          PUSH_TYPES: &#39;&#39;
+          SERVERCHAN_SEND_KEY: ${{ secrets.SERVERCHAN_SEND_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_TLS: ${{ secrets.SMTP_TLS }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_SENDER: ${{ secrets.SMTP_SENDER }}
+          SMTP_RECEIVER: ${{ secrets.SMTP_RECEIVER }}</code></pre><p>根据自身需求填写<code>secrets</code>，添加方式如下：</p>
+<p>在仓库的 <code>Settings</code> -&gt; <code>Secrets and Variables</code> -&gt; <code>Actions</code> 中点击 <code>New repository secret</code> 按照推送需要添加 Secrets.<br>添加时 <code>Name</code> 为下方全大写的配置 key, <code>Secret</code> 为对应的值, 均不需要引号.</p>
+<p>如果想推送消息，根据自己想用的推送方式，填写在<code>PUSH_TYPES: &#39;&#39;</code>这里的单引号内(如<code>TG</code>就填<code>TELEGRAM</code>，<code>server酱</code>就填<code>SERVERCHAN</code>,<code>邮箱</code>就填<code>SMTP</code>，<code>PUSHPLUS</code>就填写<code>PUSHPLUS</code>)</p>
+<p>这里我建议用pushplus(<a href="https://www.pushplus.plus/" target="_blank" rel="noopener">https://www.pushplus.plus/</a>)</p>
+<p>注册之后发送消息那里获取token，下面有详细说明每个参数的意思：</p>
 <ul>
-<li><p>1、主题症：如何分类/标签，文章列表日期排序问题折腾，关闭不蒜子评论，关闭快捷键，修改图标，修改ico，修改cdn……等等，优化主题问题，目的就是为了网站的访问速度提升</p>
-</li>
-<li><p>2、linux症：申请一台免费试用阿里云1g1h1m一个月，开始无限折腾git+nginx+hexo的问题，centos/ubuntu之间多次切换，本人以前一直未接触服务器这一块，所以担心是否系统不同导致命令无法执行，</p>
-</li>
-<li><p>3、nginx症：也是最严重的问题，多次请教了hexo群内的大神，远程帮我操作才发现自己的问题，同时解决ssl的问题，也走了不少坑。</p>
+<li><code>REFRESH_TOKENS</code> [必填]阿里云盘 refresh token, 多账户使用英文逗号 (,) 分隔*</li>
+<li><code>GP_TOKEN</code> [必填]在 Action 中运行时更新 refresh token</li>
+<li><code>SERVERCHAN_SEND_KEY</code> [可选] <em>Server酱推送渠道的 SendKey</em></li>
+<li><code>TELEGRAM_BOT_TOKEN</code> [可选] <em>Telegram Bot Token</em></li>
+<li><code>TELEGRAM_CHAT_ID</code> [可选] <em>Telegram 接收推送消息的会话 ID</em></li>
+<li><code>PUSHPLUS_TOKEN</code> [可选] <em>PushPlus Token</em></li>
+<li><code>SMTP_HOST</code> [可选] <em>SMTP 服务器地址</em></li>
+<li><code>SMTP_PORT</code> [可选] <em>SMTP 服务器端口</em></li>
+<li><code>SMTP_TLS</code> [可选] <em>SMTP 服务器是否使用 TLS</em></li>
+<li><code>SMTP_USER</code> [可选] <em>SMTP 服务器用户名</em></li>
+<li><code>SMTP_PASSWORD</code> [可选] <em>SMTP 服务器密码</em></li>
+<li><code>SMTP_SENDER</code> [可选] <em>SMTP 发件人邮箱</em></li>
+<li><code>SMTP_RECEIVER</code> [可选] <em>SMTP 收件人邮箱</em></li>
+</ul>
+<blockquote>
+<p>这些 <code>Secrets</code> 将加密存储在 GitHub, 无法被直接读取, 但可以在 Action 中使用</p>
+</blockquote>
+<p>正确添加后应显示在 <code>Repository secrets</code> 区域而非 <code>Environment secrets</code>.</p>
+<p>我的<code>secrets</code>如图</p>
+<p><img src="https://img.chenuon.cn/img/secrets.png" alt="secrets"></p>
+<table>
+<tr>
+<td bgcolor=#FFFF0>
+<strong><font color="#FF0000">获取REFRESH_TOKENS</font></strong>
+</td>
+</tr>
+</table>
+
+<p><a href="https://alist.nn.ci/tool/aliyundrive/request" target="_blank" rel="noopener">点击获取</a>，此处2种方式均可</p>
+<p><img src="https://img.chenuon.cn/img/REFRESH_TOKENS.png" alt="REFRESH_TOKENS"></p>
+<table>
+<tr>
+<td bgcolor=#FFFF0>
+<strong><font color="#FF0000">获取GP_TOKEN</font></strong>
+</td>
+</tr>
+</table>
+
+<blockquote>
+<p>点击 GitHub 头像 -&gt; <code>Settings</code> (注意与配置 Secrets 不是同一个 Settings) -&gt; <code>Developer settings</code> -&gt; <code>Personal access token</code> -&gt; <code>Tokens(classic)</code> -&gt; <code>Generate new token</code></p>
+</blockquote>
+<blockquote>
+<p>权限选择 <code>repo</code>, 不然不能更新 Secrets. <u>记住生成的 token, 离开页面后无法查看</u></p>
+</blockquote>
+<table>
+<tr>
+<td bgcolor=#FFFF0>
+<strong><font color="#FF0000">获取PUSHPLUS_TOKEN</font></strong>
+</td>
+</tr>
+</table>
+
+<p>上述已说明，如下图，复制即可</p>
+<p><img src="https://img.chenuon.cn/img/pushplus_token.png" alt="pushplus_token.png"></p>
+<p>这里贴上我的<code>signin.yml</code>配置：</p>
+<pre><code>name: Aliyun Signin
+
+on:
+  schedule:
+   # 每天国际时间 17:20 运行一次, 中国时间 01:20
+    - cron: &#39;20 17 * * *&#39;
+  workflow_dispatch:
+jobs:
+  signin:
+    name: Aliyun Signin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ImYrS/aliyun-auto-signin@main
+        with:
+          REFRESH_TOKENS: ${{ secrets.REFRESH_TOKENS }}
+          GP_TOKEN: ${{ secrets.GP_TOKEN}}
+          PUSH_TYPES: &#39;pushplus&#39;
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}</code></pre><p>我用的pushplus推送，故只用了这几个secret。</p>
+<h3 id="运行action"><a href="#运行action" class="headerlink" title="运行action"></a>运行action</h3><p>方式有两种：</p>
+<ul>
+<li><p>手动运行</p>
+<ul>
+<li><p>在仓库的 <code>Actions</code> -&gt; <code>Aliyun Signin</code> -&gt; <code>Run workflow</code> 中点击 <code>Run workflow</code> 按钮运行(4是查看结果)</p>
+<p><img src="https://img.chenuon.cn/img/action_run.png" alt="action_run.png"></p>
 </li>
 </ul>
-<h2 id="消停"><a href="#消停" class="headerlink" title="消停"></a>消停</h2><p>2020/02/05：经过数次的阿里云试用服务器的模拟，终于在今天正式成功一遍部署成功</p>
-<p>2020/02/06：正式上线个人服务器，完成部署</p>
+</li>
+<li><p>定时自动运行</p>
+<ul>
+<li>上方参考的配置文件中已经配置了定时自动运行, 每天国际时间 17:20 运行一次, 中国时间 01:20, 可根据需要调整</li>
+</ul>
+</li>
+</ul>
+<p>这里注意下github的action配额，别乱用，不过2000min/mouth也够用，如下图</p>
+<p><img src="https://img.chenuon.cn/img/action_time.png" alt="action_time.png"></p>
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p>运行完后点进去即可查看原因，只要出现签到成功即可，图中的这种错误作者告知貌似还没避免，等github原作者通知</p>
+<p><img src="https://img.chenuon.cn/img/run_faq.png" alt="run_faq.png"></p>
+<p><img src="https://img.chenuon.cn/img/faq1.png" alt="faq1.png"></p>
+<p><img src="https://img.chenuon.cn/img/faq2.png" alt="faq2"></p>
+<p>over..</p>
+<p>感谢原作者开源分享，源码如下：</p>
+<p><a href="https://github.com/ImYrS/aliyun-auto-signin/blob/main/How-To-Use-Action.md" target="_blank" rel="noopener">https://github.com/ImYrS/aliyun-auto-signin/blob/main/How-To-Use-Action.md</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 69395866@qq.com </span>
@@ -783,6 +935,18 @@
     <a  class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>无需服务器阿里云盘自动签到并推送消息</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">913</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="塵幽">塵幽</a></p>
+    <p><span class="copy-title">发布时间:</span>2023-03-13, 16:01:47</p>
+    <p><span class="copy-title">最后更新:</span>2023-03-13, 22:10:03</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2023/03/13/code-aliyun-auto-sign/" title="无需服务器阿里云盘自动签到并推送消息">https://www.chenuon.cn/2023/03/13/code-aliyun-auto-sign/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
